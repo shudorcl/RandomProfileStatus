@@ -1,0 +1,23 @@
+name: Syncer
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 8 * * *'
+    
+jobs:
+
+  task:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.17
+
+    - name: Start
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      run: go run ./syncer.go
