@@ -70,7 +70,8 @@ func main() {
 		return
 	}
 	quote := quotes[strconv.Itoa(rand.Intn(len(quotes)))]
-	err = c.SetUserStatus(quote.Emoji, quote.Text)
+	emoji := gh.Emojis.GetEmoji(quote.Emoji)
+	err = c.SetUserStatus(emoji.Emoji, quote.Text)
 	if err == nil {
 		log.Println("Sync or update profile status successfully")
 	}

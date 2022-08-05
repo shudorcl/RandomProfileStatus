@@ -1,10 +1,18 @@
 {
     "0":{
-        "emoji":"🤔",
-        "text":"testing..."
+        "emoji":"🤠",
+        "text":"白马？定叫他有来无回！"
     },
     "1":{
-        "emoji":"😆",
-        "text":"still tesing..."
+        "emoji":"🤪",
+        "text":"哈姆？"
+    },
+    "2":{
+        "emoji":"😭",
+        "text":"还望先生救我"
+    },
+    "3":{
+        "emoji":"🤯",
+        "text":"今天吃什么"
     }
 }
